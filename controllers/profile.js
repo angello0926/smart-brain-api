@@ -11,6 +11,28 @@ const handleProfileGet = (req, res, db) => {
     .catch(err => res.status(400).json('error getting user'))
 }
 
+
+const handleProfileUpdate = (req, res, db) => {
+  const { id } = req.params;
+  const { name, pet, age } = req.body.formInput
+  db('users')
+    .where({ id })
+    .update({ name })
+    .then(resp => {
+      if (res) {
+        res.status(200).json("success")
+      } else {
+        res.status(400).json('Unable to update')
+      }
+    })
+    .catch(err => 
+      {
+        console.log(err);
+        res.status(400).json("error occurs")
+      })
+}
+
 module.exports = {
-  handleProfileGet
+  handleProfileGet,
+  handleProfileUpdate
 }
