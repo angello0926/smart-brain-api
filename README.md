@@ -1,5 +1,5 @@
 # SmartBrain-api - v2
-Final project for Udemy course
+A project for [Udemy course] (https://www.udemy.com/course/the-complete-junior-to-senior-web-developer-roadmap/).
 
 1. Clone this repo
 2. Run `npm install`
@@ -8,4 +8,15 @@ Final project for Udemy course
 
 You can grab Clarifai API key [here](https://www.clarifai.com/)
 
-** Make sure you use postgreSQL instead of mySQL for this code base.
+
+Technologies used:
+* Node.js
+* PostgreSQL
+* Docker
+* Redis
+
+
+To start this app with Docker:
+
+1. Open Docker
+2. `docker-compose up --build`
