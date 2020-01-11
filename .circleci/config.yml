@@ -12,7 +12,6 @@ jobs:
         docker:
             - image: circleci/node:8.11.1
         steps:
-            - image: circleci/node:8.11.1
             - run: echo "npm testing"
             - run: npm test
 workflows:
